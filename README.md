@@ -26,6 +26,7 @@ PDB files after preprocessing should be copied into S645-pdb folder.
 
 ### Run ProteinMPNN
 Make sure you have downloaded the ProteinMPNN codes and it can run smoothly.
+
 Please check the path of ProteinMPNN, S645 data, and output directory before starting sequence design.
 ```bash
 python run_mpnn_design.py
@@ -37,7 +38,8 @@ To extract the direct couplings from designed sequences, plmc is used here.
 ```bash
 python run_plmc.py
 ```
-WARNING: This step may need long time to run. You can modify the parameters of plmc, i.e. '-m' for smaller maximal iterations. 
+**WARNING**: This step may need long time to run. You can modify the parameters of plmc, i.e. '-m' for smaller maximal iterations. 
+
 For sequences whose length is longer than 1000, more storage is needed. 
 
 ### Split dataframe
@@ -52,3 +54,9 @@ This is a modified version of final predicting model. I change the ridge regress
 ```bash
 python run_model.py
 ```
+
+## Results
+Pearson on 10-fold validation is 0.47.
+
+Comparision with other ddG prediction models:
+![image](https://github.com/ruihan-dong/MERGE_MPNN/blob/main/comparison.png)
