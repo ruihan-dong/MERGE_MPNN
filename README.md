@@ -41,5 +41,14 @@ WARNING: This step may need long time to run. You can modify the parameters of p
 For sequences whose length is longer than 1000, more storage is needed. 
 
 ### Split dataframe
-Now the direct couplings of each complex is obtained.
+Now the direct couplings of each complex is obtained. In this step, two scripts help to transform .pkl into the model input, and combine the input files of each structure.
+```bash
+python split_dataframe.py
+python merge_encodings.py
+```
 
+### Run model
+This is a modified version of final predicting model. I change the ridge regressor of original MERGE framework to a simple MLP. And 90/10 train/test split ratio is used here. More regression metrics are added. 
+```bash
+python run_model.py
+```
