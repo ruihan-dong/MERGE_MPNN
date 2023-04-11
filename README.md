@@ -5,7 +5,7 @@ This is a simple trial during my third rotation. Discussions are welcomed via em
 
 ## Datasets
 PPI.xlsx
-S645 single mutation with ddG from AB-Bind. PDB stuctures can be found here. 
+S645 single mutation with ddG from AB-Bind. PDB stuctures can be found [here](https://github.com/sarahsirin/AB-Bind-Database). 
 
 ## Dependencies
 - graphein ≤ 1.5.0
@@ -13,7 +13,7 @@ S645 single mutation with ddG from AB-Bind. PDB stuctures can be found here.
 - xlrd == 1.2.0
 - python ≥ 3.7
 - sklearn
-- torch
+- pytorch (for ProteinMPNN)
 
 ## Procedure
 ### PDB preprocessing
