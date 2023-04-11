@@ -1,7 +1,7 @@
 # MERGE_MPNN
 Structure-bridged Protein-Protein Binding Affinity Changes upon Mutations via Designed Sequences
 
-This is a simple trial during my third rotation. Discussions are welcomed via emailing dongruihan_at_stu.pku.edu.cn.
+This is a simple trial during my third rotation. Discussions are welcomed via emailing **dongruihan_at_stu.pku.edu.cn**.
 
 ## Datasets
 PPI.xlsx
