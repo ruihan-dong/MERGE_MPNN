@@ -10,7 +10,7 @@ pdb_chain['Partners(A_B)'] = pdb_chain['Partners(A_B)'].apply(lambda x: ' '.join
 
 for index,row in pdb_chain.iterrows():
     pdb_name = row[0]
-    pdb_data = S1131_data[S1131_data['protein'] == pdb_name]
+    pdb_data = S645_data[S645_data['protein'] == pdb_name]
     designed_chains = row[1].split(' ')
 
     df_mut = pdb_data['Mutation']
