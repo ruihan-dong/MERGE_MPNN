@@ -1,11 +1,9 @@
 # split file
 import os
 import pandas as pd
-from Bio import PDB
 from graphein.protein import graphs
 
 S645_data = pd.read_excel('../PPI.xlsx', sheet_name='S645')
-# S1131_data = pd.read_excel('../PPI.xlsx', sheet_name='S1131')
 pdb_chain = S645_data.iloc[:,0:2].drop_duplicates()
 pdb_chain['Partners(A_B)'] = pdb_chain['Partners(A_B)'].str.replace('_','')
 pdb_chain['Partners(A_B)'] = pdb_chain['Partners(A_B)'].apply(lambda x: ' '.join(str(x)))
@@ -22,7 +20,8 @@ for index,row in pdb_chain.iterrows():
     df_before_aa = df_mutants.str[0:1]  # F
     df_after_aa = df_mutants.str[-1:]  # A
     df_num = df_mutants.str[1:-1]   # 17
-
+    
+    # read pdb file
     df_pdb = graphs.read_pdb_to_dataframe(pdb_path = '../S645-pdb/'+pdb_name+'.pdb')
     df_pdb_chains = df_pdb.loc[df_pdb['chain_id'].isin(designed_chains)]
     df_ca = df_pdb_chains.loc[df_pdb_chains['atom_name'] == 'CA'].reset_index(drop=True)
